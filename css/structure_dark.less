@@ -1,0 +1,1141 @@
+.navbar-brand {
+  height: 2em;
+  font-size: 1.5em;
+  padding: 0.25em 0.5em 0.25em 0.5em;
+}
+
+// div {
+//     z-index: 1;
+// }
+.leaflet-left {
+  left: 95%;
+}
+
+canvas {
+  border: 1px solid black;
+}
+
+div.tooltip {
+  position: absolute;
+  text-align: left;
+  white-space: normal;
+  padding: 1.5px;
+  font-size: 10px;
+  background: rgba(100, 100, 100, 0.5);
+  border: 1px solid gray;
+  color: white;
+}
+
+.leaflet-bar {
+  a {
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background: none;
+    border: 1px solid white !important;
+  }
+}
+
+.leaflet-overlay-pane svg {
+  z-index: 1;
+}
+
+.leaflet-heatmap-layer.leaflet-zoom-animated {
+  position: absolute; //background-color: #000000;
+  left: 0;
+  top: 0;
+}
+
+.dropdown-menu {
+  top: 2em;
+  font-size: 1em;
+  width: 80px;
+  min-width: 0px;
+  cursor: pointer; // z-index:1;
+}
+
+.dropdown {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 4px;
+  background: #999999;
+  color: #000000;
+  border-radius: 2px;
+}
+
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: #999999;
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+body {
+  font-family: @font-family1; // top:80px;
+  font-size: 14px;
+
+  moz-user-select: -moz-none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden; // overflow: scroll;
+  ::-webkit-scrollbar {
+    /* width: 12px; */
+    /* for vertical scrollbars */
+    /* height: 12px; */
+    /* for horizontal scrollbars */
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 1);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.div {
+  scrollbar-face-color: #ebebeb;
+  scrollbar-shadow-color: #ffffff;
+  scrollbar-highlight-color: #ffffff;
+  scrollbar-3dlight-color: #d8d8d8;
+  scrollbar-darkshadow-color: #d8d8d8;
+  scrollbar-track-color: #ffffff;
+  scrollbar-arrow-color: #686868;
+}
+
+//.btn {
+//  font-size: 1em;
+//}
+
+#callsignSelectedValue,
+#callsignCurrentSelectedValue {
+  width: 5.5em;
+  cursor: text;
+}
+
+.input-group {
+  font-size: 0.8em;
+}
+
+input,
+button,
+select,
+textarea {
+  //复选框的大小
+  font-size: 1em;
+}
+
+.badge {
+  font-size: 1em;
+}
+
+text {
+  color: #999;
+  fill: #999;
+}
+
+span {
+  color: #999;
+}
+
+p {
+  color: #999;
+}
+
+.navbar {
+  //width:50%;
+  margin-bottom: 0px;
+}
+
+.navbar-brand {
+  color: white;
+}
+
+#loading {
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn-selected {
+  border-color: white;
+  background-color: rgba(100, 100, 100, 1);
+  color: white;
+}
+
+#maindiv {
+  position: absolute;
+  border: @border;
+  width: 100%;
+  height: 100%;
+  color: #999;
+  background-color: #000000;
+}
+
+#fakestation-app {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  overflow-x: scroll; //height:@app-height;
+  .small-font {
+    -webkit-transform: scale(0.8);
+  }
+  #timeline {
+    position: absolute;
+    left: 0;
+    top: 82%;
+    height: 18%;
+    width: 100%;
+    border: @border2;
+    font-size: 12px;
+    opacity: 0.9;
+    background-color: @background_color_dark;
+    button {
+      background: white;
+    }
+
+    #timelineLeft {
+      position: absolute;
+      top: 0em;
+      left: 0em;
+      height: 100%;
+      width: 100%;
+      float: right;
+
+      .slidingPath {
+        z-index: 5;
+      }
+      .slidingPath:hover {
+        stroke: white;
+        stroke-width: 2;
+        cursor: move; // z-index: 5;
+      }
+
+      #timelineSvgB {
+        position: absolute;
+        left: 0%;
+        top: 50%+1em;
+        height: 50%-1em;
+        width: 100%; //border:@border2;
+      }
+
+      line,
+      path {
+        stroke: #999;
+        stroke-width: 2;
+      }
+    }
+  }
+  #left {
+    position: absolute;
+    left: 0;
+    height: @view-height;
+    width: @left-width;
+    border: @border2;
+    background-color: @background_color_dark;
+  }
+  #stat {
+    position: absolute;
+    left: @left-width;
+    height: @view-height;
+    width: @stat-width;
+    border: @border2;
+    background-color: @background_color_dark;
+  }
+  .parameterPanel {
+    position: absolute;
+    width: 160px;
+    left: 0%;
+    top: 15%;
+    z-index: 4;
+    background: rgba(56, 56, 56, 0.7);
+
+    p {
+      position: relative;
+      font-size: 12px;
+      left: 3%;
+      top: 3%;
+      margin-bottom: 0;
+      color: #29FFA4;
+    }
+
+    .infoText {
+      position: relative;
+      top: 2%;
+      left: 5%;
+      margin-bottom: 0;
+      color: white;
+      font-size: 12px;
+      /*    // height:20px;
+      // width:100px;*/
+    }
+  }
+
+
+  #map {
+    position: absolute;
+    left: @left-width + @stat-width;
+    height: 100%; //width:@map-width;
+    width: 100%;
+    border: @border2;
+    background-color: @background_color_dark;
+    .badge.flight_dep_num_badge {
+      background-color: rgb(41, 170, 227);
+    }
+    .badge.flight_arr_num_badge {
+      background-color: rgb(209, 71, 69);
+    }
+    #mapBackground {
+      height: 100%;
+      width: 100%;
+    }
+
+
+
+    //#Swith3d{
+    //  display: block;
+    //  min-height: 20px;
+    //  padding-left: 0px;
+    //  margin-top: 0px;
+    //  margin-bottom: 0px;
+    //
+    //  //.radioReset {
+    //  //  float: none;
+    //  //   margin-left: 0px;
+    //  //  margin-right: 5px;
+    //  //}
+    //
+    //}
+    #map3d{
+      position: absolute;
+      //left: @left-width + @stat-width;
+      height: 100%; //width:@map-width;
+      width: 100%;
+
+      #container3d{
+        height: 100%;
+        width: 100%;
+      }
+
+
+    }
+    #timelineControl {
+      position: absolute; //top: calc(~"50% - 5.5em");
+      bottom: 21.2%;
+      left: 0em;
+      //height: 100%;
+      width: 100%;
+      float: left;
+      #controlBtn {
+        position: absolute;
+        top: 0em; // left: 100%; // height: 4em;
+        width: 100%;
+        #timePlay {
+          // position: absolute;
+          float: left;
+          margin-right: .1%;
+          width: auto;
+          top: 0px;
+          left: 0em;
+          z-index: 1;
+        }
+        #playSpeedDropdown {
+          // position: absolute;
+          float: left;
+          margin-right: .1%;
+          width: auto;
+          top: 0px; // left: 2.2em;
+        }
+        #winSizeDropdown {
+          // position: absolute;
+          float: left;
+          margin-right: .1%;
+          width: auto;
+          top: 0em; // left: 6.5em;
+        }
+        #curTimeText {
+          // position: absolute;
+          float: left;
+          margin-right: .1%;
+          width: auto;
+          top: 0em; // left: 6.5em;
+        }
+      }
+      #legend {
+        position: absolute;
+        top: 4em;
+        height: 5em;
+        width: 100%;
+        text {
+          font-size: 0.8em
+        }
+      }
+      #fontBtn {
+        position: absolute;
+        top: 9.5em;
+        left: 0em;
+        height: 2em;
+        width: 100%;
+
+        #button_week_backward {
+          position: absolute;
+          top: 0px;
+          left: 0;
+        }
+        #button_day_backward {
+          position: absolute;
+          top: 0px;
+          left: 2.1em;
+        }
+        #button_day_forward {
+          position: absolute;
+          top: 0px;
+          left: 4.2em;
+        }
+        #button_week_forward {
+          position: absolute;
+          top: 0px;
+          left: 6.3em;
+        }
+      }
+    }
+
+    .slider {
+      //left: 10%;
+      width: 80%;
+    }
+
+    .slider.slider-horizontal .slider-track {
+      height: 0.4em;
+    }
+
+    .slider-handle.round {
+      border-radius: 20%;
+      width: 1em;
+      height: 1.2em;
+      cursor: pointer;
+    }
+
+    #fixptsHistogram {
+      position: absolute;
+      top: 13.5%;
+      left: 1%;
+      width: 13%;
+      height: 66.5%; //background-color: #000000;
+      text-align: center;
+      .y.axis line,
+      .y.axis path {
+        fill: none;
+        stroke: #999999;
+        stroke-width: 1px;
+      }
+      .x.axis line,
+      .x.axis path {
+        fill: none;
+        stroke: #999999;
+        stroke-width: 1px;
+      }
+      .axis text {
+        //fill: white;
+        font-size: 0.52em;
+        font-family: Arial, Helvetica, sans-serif; //stroke-width: 0.5;
+      }
+      #fixptsHistogram_real {
+        position: relative;
+        width: 100%;
+        height: 95%; //overflow-y: scroll;
+        //overflow-x: hidden;
+        .histogram_simple_div {
+          position: relative;
+          border: @border;
+          float: left;
+        }
+      }
+    }
+    #mapControl {
+      position: absolute;
+      width: 11em;
+      top: 6em;
+      right: 1em;
+      opacity: 0.9;
+      .controlTitle span {
+        font-size: 1em;
+      }
+      .dropdown-menu {
+        width: 6em;
+      }
+
+      #resetFixpotSelection {
+        color: yellow;
+        cursor: pointer;
+      }
+      .dep_num_control {
+        background-color: rgb(41, 170, 227);
+      }
+      .arr_num_control {
+        background-color: rgb(209, 71, 69);
+      }
+      .badge {
+        color: #fff;
+      }
+      // border:@border;
+    }
+    #ProjectTitle {
+      position: absolute;
+      top: 0%;
+      left: 1%;
+      width: auto;
+      height: auto;
+      font-size: 1.5em; //border:@border;
+      background-color: #000000;
+      opacity: 0.9;
+    }
+    #AirportPanel {
+      position: absolute;
+      top: 5%;
+      left: 1%;
+      width: auto;
+      height: auto; //border:@border;
+      background-color: #000000;
+      #speedLegend {
+        width: 100%;
+        height: 2em;
+      }
+    }
+  }
+  #right {
+    position: absolute;
+    left: @left-width + @stat-width + @map-width;
+    height: @view-height;
+    width: @right-width;
+    border: @border2;
+    background-color: @background_color_dark;
+  }
+
+  #traj_list_div {
+    position: absolute; //overflow: scroll;
+    color: #999999;
+    top: 0%;
+    left: 70%; //left:100%;
+    //width:@list-width;
+    //width:0%;
+    width: 30%;
+    height: 100%;
+    border: @border;
+    #traj_list_div_title {
+      position: absolute;
+      left: 0%;
+      top: 0;
+      height: 2em;
+      width: 100%;
+      border: @border;
+    }
+    #traj_list_div_content {
+      position: absolute;
+      left: 0%;
+      top: 2em;
+      height: calc(~"100% - 2em");
+      width: 100%;
+      border: @border;
+      #traj_list_title {
+        text-align: center;
+        cursor: pointer;
+        border: @border;
+        width: 100%;
+        height: auto;
+        #reset_highlight {
+          float: right;
+        }
+        .dep_num_badge {
+          background-color: rgb(41, 170, 227);
+        }
+        .arr_num_badge {
+          background-color: rgb(209, 71, 69);
+        }
+        .cdm_num_badge {
+          background-color: #999999;
+        }
+      }
+      #traj_list_table_div {
+        overflow-y: scroll;
+        height: 94%;
+        #traj_list_table {
+          text-align: center;
+          border: @border;
+          width: 100%;
+          padding-left: 1px;
+        }
+        #traj_list_table th {
+          text-align: center;
+          color: #999999;
+        }
+        .traj_list_table_th:hover {
+          cursor: pointer;
+          border: solid 1px #FFFFFF;
+        }
+        .traj_list_table_tr:hover {
+          cursor: pointer;
+          border: solid 1px #FFFFFF;
+        }
+        #traj_list_table tr.active {
+          cursor: pointer;
+          background-color: #999999;
+          color: #000000; //border: solid 1px #FFFFFF;
+        }
+      }
+    }
+  }
+  //#traj_list_div {
+  //  position:absolute;
+  //  //overflow: scroll;
+  //  color:#999999;
+  //  top:0%;
+  //  left:50%;
+  //  //width:@list-width;
+  //  width:13%;
+  //  height:100%;
+  //  border:@border;
+  //  #traj_list_title {
+  //    text-align:center;
+  //    cursor:pointer;
+  //    border:@border;
+  //    width:100%;
+  //    height:auto;
+  //    #reset_highlight {
+  //      float:right;
+  //    }
+  //    .dep_num_badge {
+  //      background-color: rgb(41, 170, 227);
+  //    }
+  //    .arr_num_badge {
+  //      background-color: rgb(209, 71, 69);
+  //    }
+  //    .cdm_num_badge {
+  //      background-color: #999999;
+  //    }
+  //  }
+  //  #traj_list_table_div {
+  //    overflow-y: scroll;
+  //    height:94%;
+  //    #traj_list_table {
+  //      text-align:center;
+  //      border:@border;
+  //      width:100%;
+  //      padding-left: 1px;
+  //    }
+  //    #traj_list_table th{
+  //      text-align:center;
+  //      color:#999999;
+  //    }
+  //    #traj_list_table tr:hover{
+  //      cursor:pointer;
+  //      border: solid 1px #FFFFFF;
+  //    }
+  //    #traj_list_table tr.active{
+  //      cursor:pointer;
+  //      background-color: #999999;
+  //      color: #000000;
+  //      //border: solid 1px #FFFFFF;
+  //    }
+  //  }
+  //}
+  .view_title {
+    color: #999;
+    font-size: 1em;
+    line-height: 2em;
+    text-align: center;
+    vertical-align: middle;
+    background: #000000;
+  }
+  #overview_parellel_view {
+    position: absolute;
+    top: 0%;
+    left: 63%;
+    width: 9%;
+    height: 70%;
+    border: @border2;
+    #overview_parellel_view_title {
+      position: absolute;
+      left: 0%;
+      top: 0;
+      height: 2em;
+      width: 100%;
+      border: @border;
+    }
+    #overview_parellel_view_content {
+      position: absolute;
+      left: 0%;
+      top: 2em;
+      height: calc(~"100% - 2em");
+      width: 100%;
+      #overview_view {
+        position: absolute;
+        color: #FFFFFF;
+        top: 0; //left:@overview_view-left;
+        left: 0%;
+        width: 55%;
+        height: 100%;
+        border: @border;
+        border-right: 1px solid #000000;
+        .feature_group_tag_container {
+          border-top: 2px solid #323232;
+        }
+        line,
+        path {
+          fill: none;
+          stroke-width: 1px;
+        }
+        text {
+          font-size: 0.8em;
+          font-family: Arial, Helvetica, sans-serif;
+          stroke-width: 0.5;
+        }
+        .feaNameText text {
+          font-size: 1em;
+        }
+      }
+      #parellel_view {
+        position: absolute; //overflow: scroll;
+        top: 0; //left:@parallel-left;
+        left: 55%; //width:8%;
+        width: 45%;
+        height: 100%;
+        border: @border;
+        border-left: 1px solid #000000;
+        text {
+          font-size: 0.8em;
+          font-family: Arial, Helvetica, sans-serif;
+          stroke-width: 0.5;
+        }
+        .foreground path {
+          stroke-opacity: 0.5;
+          stroke: rgb(41, 170, 227);
+        }
+        .tick text {
+          fill: white;
+        }
+        #pc_arr {
+          position: absolute;
+          top: 0%;
+          width: 100%;
+          height: 50%;
+          border: @border;
+          .foreground path {
+            stroke-opacity: 0.5;
+            stroke: rgb(209, 71, 69);
+          }
+        }
+        #pc_dep {
+          position: absolute;
+          top: 50%;
+          width: 100%;
+          height: 50%;
+          border: @border;
+          .foreground path {
+            stroke: rgb(41, 170, 227);
+          }
+        }
+
+        .background path {
+          fill: none;
+          stroke: #999;
+          stroke-width: 1.5;
+          opacity: 0.5;
+          shape-rendering: crispEdges;
+        }
+
+        .foreground path {
+          fill: none;
+          stroke-width: 1.5;
+        }
+
+        .brush .extent {
+          //font-size: #eee;
+          fill-opacity: 0.4;
+          fill: white;
+          stroke-opacity: 0.5;
+          stroke-width: 1.5;
+          shape-rendering: crispEdges;
+        }
+
+        .axis line,
+        .axis path {
+          fill: none; //stroke: white;
+          stroke-width: 1px;
+        }
+
+        .axis text {
+          //fill: white;
+          //font-size: 0.5em;
+          font-family: Arial, Helvetica, sans-serif;
+          stroke-width: 1;
+        }
+      }
+    }
+  }
+
+  #HDP_view {
+    position: absolute;
+    top: 100%;
+    left: 70%;
+    width: 30%;
+    height: 0%;
+    border: @border;
+    #HDP_view_title {
+      position: absolute;
+      left: 0%;
+      top: 0;
+      height: 2em;
+      width: 100%;
+      border: @border;
+    }
+    #HDP_view_content {
+      position: absolute;
+      left: 0%;
+      top: 2em;
+      height: calc(~"100% - 2em");
+      width: 100%;
+      border: @border;
+      .relatedGraphNode {
+        stroke: #fff;
+        stroke-width: 0.5px;
+      }
+      .relatedGraphLink {
+        stroke: #999;
+        stroke-opacity: .6;
+      }
+      .not_active {
+        //stroke: rgb(100, 100, 100);
+        //fill: rgb(100, 100, 100);
+        fill-opacity: 0.3;
+        stroke-opacity: 0.6;
+      }
+    }
+  }
+
+  #timeDistribution_view {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 0%;
+    height: 0%;
+    border: @border;
+    #timeDistribution_view_title {
+      position: absolute;
+      left: 0%;
+      top: 0;
+      height: 2em;
+      width: 100%;
+      border: @border;
+    }
+    #timeDistribution_view_content {
+      position: absolute;
+      left: 0%;
+      top: 2em;
+      height: calc(~"100% - 2em");
+      width: 100%;
+      border: @border;
+    }
+  }
+
+  #sm_view {
+    position: absolute;
+    overflow: hidden;
+    color: #999999;
+    top: 0%;
+    left: 76%;
+    right: 0%; //width:22%;
+    height: 30%;
+    border: @border;
+    #sm_view_title {
+      position: absolute;
+      left: 0%;
+      top: 0;
+      height: 2em;
+      width: 100%;
+      border: @border;
+    }
+    #sm_view_total {
+      position: absolute;
+      left: 0%;
+      top: 2em;
+      height: calc(~"100% - 2em");
+      width: 100%;
+      border: @border;
+    }
+    #sm_view_content {
+      position: absolute;
+      left: 0%;
+      top: 0%;
+      height: 100%;
+      width: calc(~"100% - 10em");
+      border: @border;
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
+    #sm_view_legend {
+      position: absolute;
+      right: 0%;
+      top: 0%;
+      height: 100%;
+      width: 10em;
+      border: @border;
+    }
+    .sm_simple_view {
+      position: relative;
+      border: @border;
+      float: left;
+      .simple_sm_title {
+        fill: #999;
+      }
+    }
+    .sm_simple_view:hover {
+      cursor: pointer;
+      border: solid 1px #FFFFFF;
+    }
+    .sm_simple_view.active {
+      .sm_title_background {
+        background-color: #999999;
+      }
+      .simple_sm_title {
+        fill: #000000;
+      }
+    }
+    .arc path {
+      stroke: #000;
+      stroke-width: 2;
+    }
+    .arc path:hover {
+      stroke: #FFF;
+    }
+  }
+
+  #CDM_Gantta {
+    position: absolute;
+    top: 70%;
+    left: 76%; //width:32%;
+    right: 0%;
+    bottom: 0%;
+    border: @border;
+    #CDM_Gantta_title {
+      position: absolute;
+      left: 0%;
+      top: 0;
+      height: 2em;
+      width: 100%;
+      border: @border;
+    }
+    #CDM_Gantta_content {
+      position: absolute;
+      left: 0%;
+      top: 2em;
+      height: calc(~"100% - 2em");
+      width: 100%;
+      border: @border;
+    }
+  }
+  //#CDM_linechart {
+  //  position:absolute;
+  //  //overflow: scroll;
+  //  top:30%;
+  //  left:95%;
+  //  right:0%;
+  //  height:30%;
+  //  border:@border;
+  //}
+  #ranking_view {
+    position: absolute;
+    top: 30%; //width:22%;
+    left: 76%;
+    right: 0%;
+    height: 40%;
+    border: @border;
+    #ranking_view_title {
+      position: absolute;
+      left: 0%;
+      top: 0;
+      height: 2em;
+      width: 100%;
+      border: @border;
+    }
+    #ranking_view_content {
+      position: absolute;
+      left: 0%;
+      top: 2em;
+      height: calc(~"100% - 2em");
+      width: 100%;
+      border: @border;
+    }
+  }
+
+  #calendarHeatmap {
+    position: absolute;
+    top: 0%;
+    left: 72%;
+    width: 4%; //right:0%;
+    height: 100%;
+    border: @border;
+    text {
+      font-size: 0.8em;
+    }
+    #calendarHeatmap_title {
+      position: absolute;
+      left: 0%;
+      top: 0;
+      height: 2em;
+      width: 100%;
+      border: @border;
+    }
+    #calendarHeatmap_content {
+      position: absolute; //left: 20%;
+      top: 2em;
+      height: calc(~"100% - 2em");
+      width: 100%; //border: @border;
+    }
+    .mul_calendar_rect:hover {
+      stroke: yellow;
+      cursor: pointer;
+    }
+    .axis line,
+    .axis path {
+      shape-rendering: crispEdges;
+      stroke: rgb(100, 100, 100);
+      fill: none; //display: none;
+    }
+
+    .graph-label {
+      font-size: 1em;
+    }
+    .legend_text {
+      fill: #999999;
+      text-anchor: middle;
+      font-size: 0.8em;
+    }
+    .graph-rect {
+      fill: #000000;
+      stroke: #999999;
+      stroke-width: 1;
+    }
+    .graph-rect.active {
+      stroke: #FFFFFF;
+      stroke-width: 2;
+    }
+    .graph-rect:hover {
+      stroke: yellow;
+      stroke-width: 2;
+      cursor: pointer;
+    }
+    .q1 {
+      fill: #999999;
+    }
+    .q2 {
+      fill: rgb(252, 187, 161);
+    }
+    .q3 {
+      fill: rgb(165, 15, 21);
+    }
+  }
+}
+
+#timeComp {
+  position: absolute;
+  left: 15%;
+  width: 20%;
+  background-color: #000;
+}
+
+#timeComprison {
+  position: relative;
+  height: 450px;
+}
+
+#information {
+  position: absolute;
+  left: 36%;
+  width: 20%;
+  background-color: #000;
+}
+
+#information_body {
+  position: relative;
+  height: 150px;
+}
+
+#linechart1 {
+  position: absolute;
+  top: 30%;
+  left: 0%;
+  right: 0%;
+  height: 35%;
+  border: @border;
+  display: block;
+  font-size: 8px;
+}
+
+#linechart2 {
+  position: absolute;
+  top: 65%;
+  left: 0%;
+  right: 0%;
+  height: 35%;
+  border: @border;
+  font-size: 8px;
+}
+
+#centerAirport {
+  position: relative;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  height: 50%;
+
+  font-size: 8px;
+}
+
+#centerAirport1 {
+  position: relative;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  height: 50%;
+
+  font-size: 8px;
+}
+
+//#analysis-div {
+//  position:absolute;
+//  border:@border;
+//  left:100%;
+//  width:100%;
+//  height:100%;
+//  background-color: #000000;
+//  color: #FFFFFF;
+//}

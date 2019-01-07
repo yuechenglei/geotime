@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=0.5" /> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Geotime</title>
+
+    <link rel="stylesheet/less" type="text/css" id="body_css" href="css/style_dark.less"/>
+
+    <link rel="stylesheet/less" type="text/css" href="css/Gantta.less"/>
+    <link rel="stylesheet/less" type="text/css" href="css/timeline.css"/>
+    <link rel="stylesheet/less" type="text/css" href="css/ranking.less"/>
+    <link rel="stylesheet/less" type="text/css" href="css/bootstrap-slider.css"/>
+
+
+    <script>
+        less = {
+            env: 'development',
+            dumpLineNumbers: 'all'
+        };
+    </script>
+    <script src="bower_components/less/dist/less.min.js"></script>
+    <!--<script src="bower_components/three/three.js">  </script>-->
+    <!--<script src="bower_components/three/three-text2d.js">  </script>-->
+    <script data-main="js/main" src="bower_components/requirejs/require.js"></script>
+    <!--<script src="bower_components/three/three.js">  </script>-->
+    <!--<script src="bower_components/three/three-text2d.js">  </script>-->
+
+ <!-- Definition of shader material for the default particles -->
+    <script type="x-shader/x-vertex" id="vertexshader">
+
+            attribute float size;
+            attribute vec3 customColor;
+
+
+            varying vec3 vColor;
+
+            void main() {
+
+                vColor = customColor;
+
+                vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+
+                gl_PointSize = size * ( 10.0 / -mvPosition.z );
+
+
+                gl_Position = projectionMatrix * mvPosition;
+
+            }
+    </script>
+
+    <script type="x-shader/x-fragment" id="fragmentshader">
+
+            uniform vec3 color;
+            uniform sampler2D texture;
+
+            varying vec3 vColor;
+
+            void main() {
+
+                gl_FragColor = vec4( color * vColor, 0.8 );
+
+                gl_FragColor = gl_FragColor * texture2D( texture, gl_PointCoord );
+
+                if ( gl_FragColor.a < ALPHATEST ) discard;
+
+            }
+
+    </script>
+
+    <style type="text/css" media="print">
+        * {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<script>
+
+</script>
+<div id="maindiv">
+    <!-- <nav class="navbar navbar-default app-navbar navbar-inverse" role="navigation"> -->
+    <!-- navbar-inverse -->
+    <!-- <div class="navbar-header"> -->
+    <!-- <a class="navbar-brand app-navbar-title" href="#" id ="apptitle">Air Traffic Control Visual Analysis System -->
+    <!-- </a> -->
+    <!--    <a class="navbar-brand app-navbar-title" href="http://vis.pku.edu.cn/wiki/" target="_blank"> PKU Visualization and Visual Analytics Group (http://vis.pku.edu.cn/wiki)
+       </a> -->
+    <!-- <img src = "img/logo.png" height="40px" style="margin-top: 5px;"> -->
+    <!-- </div> -->
+    <!-- </nav> -->
+
+    <div id="fakestation-app" style="position:absolute;"></div>
+
+    <!--<div id = "analysis-div"></div>-->
+    <!-- Loading -->
+    <div class="loading" id='loading'>
+        <div class="back"></div>
+        <div class="logo">
+            <i class="fa fa-spinner fa-spin fa-lg"></i>
+            <span> Loading ...</span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+

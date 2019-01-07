@@ -1,0 +1,41 @@
+"Point"
+[{
+    "loc" : { "type": "Point", "coordinates": [ -73.97, 40.77 ] }  // longitude, latitude.
+},
+
+]
+
+"point query condition"
+{
+    "type": "logical", // "logaical" or "single"
+    "lType":"or", // "and " , "or" , "not", "nor"
+    "condition" : [
+        {
+            "type" : "single",
+            "sType": "centerSphere",   // ref https://docs.mongodb.com/manual/reference/operator/query-geospatial/
+            "condition":[
+                [ -88, 30 ], 10/3963.2  //within a 10 mile radius of longitude 88 W and latitude 30 N.
+            ]
+        },
+        {
+            "type" : "single",
+            "sType": "centerSphere",   // ref https://docs.mongodb.com/manual/reference/operator/query-geospatial/
+            "condition":[
+                [ -90, 30 ], 10/3963.2  //within a 10 mile radius of longitude 88 W and latitude 30 N.
+            ]
+        },
+
+
+    ]
+}
+
+"line query condition"
+"single polygon"
+{
+    "type" : "single",
+    "sType": "Polygon",   
+    "condition":{        
+        'type': 'Polygon',
+        'coordinates': [[ 9, 9 ], [9, 12], [12, 12], [9, 9]]
+    }
+}

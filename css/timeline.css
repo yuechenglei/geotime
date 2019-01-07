@@ -1,0 +1,267 @@
+.rangeText {
+    text-anchor: middle;
+}
+
+.rangePath {
+    stroke: grey;
+    stroke-width: 1.5;
+    fill: none;
+}
+
+.resize path {
+    fill: #403e42;
+    fill-opacity: .1;
+    stroke: #dedbdb;
+    stroke-width: 0.5px;
+}
+
+.brush .extent {
+    fill-opacity: 0.2;
+    /*fill: none;*/
+    stroke: white;
+    stroke-opacity: .5;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+/*
+#map #mapControl .slider .sliderBar {
+    position: absolute;
+    left: 46px;
+    top: 3px;
+    width: 70px;
+}*/
+
+/*#ef2929*/
+#sliderWinSize .ui-slider-range {
+    background: #aba4a4;
+}
+
+#sliderWinSize .ui-slider-handle {
+    border-color: grey;
+}
+
+#sliderPlaySpeed .ui-slider-range {
+    background: #aba4a4;
+}
+
+#sliderPlaySpeed .ui-slider-handle {
+    border-color: grey;
+}
+
+path.line {
+    fill: none;
+    stroke-width: 1.5px;
+}
+
+path.area {
+    fill: #e7e7e7;
+}
+
+.axis {
+    shape-rendering: crispEdges;
+}
+/*
+.x.axis line {
+    stroke: #999;
+}*/
+
+.x.axis .minor {
+    stroke-opacity: .5;
+}
+
+.x.axis path {
+    display: none;
+}
+
+.y.axis line,
+.y.axis path {
+    fill: none;
+    stroke: #000;
+}
+
+.centerAirportBar line,
+.centerAirportBar path {
+    stroke-width: 0.5px;
+}
+
+.arrbar {
+    fill: rgb(209, 71, 69);
+}
+
+.depbar {
+    fill: rgb(41, 170, 227);
+}
+
+.monBar:hover {
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.dayBar:hover {
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.monBar, .dayBar {
+    fill: none;
+    opacity: 0;
+}
+
+.click {
+    opacity: 0 !important;
+}
+
+.curveAxisbot {
+    fill: none;
+    stroke-width: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    shape-rendering: crispEdges;
+}
+
+.curveAxisbot text {
+    font-family: Arial, Helvetica, sans-serif;
+    stroke-width: 0.5;
+}
+
+.curveAxis {
+    fill: none;
+    stroke-width: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    shape-rendering: crispEdges;
+}
+
+/*.curveAxis text {
+    fill: #999;
+    font-size: 0.7em;
+    font-family: Arial, Helvetica, sans-serif;
+    stroke-width: 0.5;
+}*/
+
+.tick text {
+    font-family: Arial, Helvetica, sans-serif;
+    stroke-width: 0.5;
+}
+
+#overview_view .tick text {
+    font-family: Arial, Helvetica, sans-serif;
+    stroke-width: 0.5;
+}
+
+.slidingWindow {
+
+rect {
+    fill: white;
+    fill-opacity: 0;
+    /*fill:rgba(255,255,255,0.05);*/
+    stroke: white;
+    stroke-opacity: 0;
+    stroke-width: 2;
+    cursor: move;
+}
+
+}
+
+/*.d3-tip,*/
+/*.d3-tip-top {*/
+    /*z-index: 999;*/
+    /*line-height: 1;*/
+    /*font-weight: bold;*/
+    /*padding: 1px;*/
+    /*background: rgba(0, 0, 0, 0.8);*/
+    /*color: #999;*/
+    /*border-radius: 2px;*/
+/*}*/
+
+/*!* Creates a small triangle extender for the tooltip *!*/
+/*.d3-tip:after,*/
+/*.d3-tip-top:after {*/
+    /*box-sizing: border-box;*/
+    /*display: inline;*/
+    /*font-size: 6px;*/
+    /*width: 100%;*/
+    /*line-height: 1;*/
+    /*color: #999;*/
+    /*content: "\25BC";*/
+    /*position: absolute;*/
+    /*text-align: center;*/
+/*}*/
+
+/*!* Style northward tooltips differently *!*/
+/*.d3-tip.n:after,*/
+/*.d3-tip-top.n:after {*/
+    /*margin: -1px 0 0 0;*/
+    /*top: 100%;*/
+    /*left: 0;*/
+/*}*/
+/*.d3-tip {*/
+    /*line-height: 1;*/
+    /*width: 100px;*/
+    /*!*font-weight: bold;*!*/
+    /*padding: 4px 4px 4px 4px;*/
+    /*background: rgba(0, 0, 0, 0.8);*/
+    /*color: #999;*/
+    /*border-radius: 2px;*/
+/*}*/
+
+/*!* Creates a small triangle extender for the tooltip *!*/
+/*.d3-tip:after {*/
+    /*box-sizing: border-box;*/
+    /*display: inline;*/
+    /*font-size: 10px;*/
+    /*width: 100%;*/
+    /*line-height: 1;*/
+    /*color: rgba(0, 0, 0, 0.8);*/
+    /*content: "\25BC";*/
+    /*position: absolute;*/
+    /*text-align: center;*/
+/*}*/
+
+/*!* Style northward tooltips differently *!*/
+/*.d3-tip.n:after {*/
+    /*margin: -1px 0 0 0;*/
+    /*top: 100%;*/
+    /*left: 0;*/
+/*}*/
+/*.btn-default{
+  color:#aaa;
+  background: black;
+}
+.btn-default:hover{
+  background-color:none;
+}
+.button_play{
+  color:#aaa;
+  background: black;
+}*/
+/*
+#timeline {
+
+        #timelineControl{
+            #timePlay{
+                cursor:pointer;
+            }
+            .dropdown-menu{
+              font-size:12px;
+               width: 80px;
+               min-width: 0px;
+               cursor:pointer;
+            }
+
+        }
+        #timelineSvg{
+            .bin{
+                fill:@color1;
+            }
+
+        }
+        .slidingWindow{
+          rect{
+            fill:rgba(255,255,255,0.05);
+            stroke:black;
+            cursor:move;
+
+          }
+        }
+}
+
+*/

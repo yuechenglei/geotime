@@ -1,0 +1,177 @@
+//#CDM_Gantta_content{
+//  overflow-y: scroll;
+//}
+#time-sequence-entire-group {
+  position: absolute;
+  padding-left: 0.1em;
+  padding-right: 0.1em;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+}
+#time-sequence-bar{
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  top: 0%;
+  left: 0%;
+  background-color: black;
+}
+.timesequence{
+  //stroke: gray;
+  //stroke-width: 1px;
+}
+.timesequence-label[class~=flightnumber-highlight] {
+  opacity: 1;
+  font-size: 0.5em;
+}
+text[class~=mouseover-unhighlight], text[class~=click-unhighlight]{
+  opacity: 0.3;
+}
+text[class~=mouseover-highlight], text[class~=click-highlight]{
+  opacity: 1 !important;
+}
+.basic-events[class~=mouseover-unhighlight], .added-events[class~=mouseover-unhighlight], .basic-events[class~=click-unhighlight], .added-events[class~=click-unhighlight]{
+  opacity: 0.3;
+}
+.basic-events[class~=mouseover-highlight], .basic-events[class~=click-highlight], .added-events[class~=mouseover-highlight], .added-events[class~=click-highlight]{
+  opacity: 1 !important;
+}
+.timesequence[class~=mouseover-unhighlight], .timesequence[class~=click-unhighlight]{
+  opacity: 0.3;
+}
+.timesequence[class~=mouseover-highlight], .timesequence[class~=click-highlight]{
+  opacity: 1 !important;
+}
+.timesequence-whole[class~=mouseover-unhighlight] {
+  opacity: 0.3;
+}
+.timesequence-whole[class~=mouseover-highlight] {
+  opacity: 1 !important;
+}
+.delay[class~=mouseover-unhighlight], .delay[class~=click-unhighlight] {
+  opacity: 0.3;
+}
+.delay[class~=mouseover-highlight], .delay[class~=click-highlight]{
+  opacity: 1 !important;
+}
+path[class~=mouseover-unhighlight], path[class~=click-unhighlight]{
+  opacity: 0.3;
+}
+path[class~=mouseover-highlight], path[class~=click-highlight]{
+  opacity: 1 !important;
+}
+rect[class~=missing]{
+  fill: #ffffff;
+}
+//div#tooltip {
+//  position: absolute;
+//  text-align: center;
+//  _width: 100px;
+//  _height: 50px;
+//  padding: 2px;
+//  font: 12px sans-serif;
+//  background: lightsteelblue;
+//  border: 0px;
+//  border-radius: 8px;
+//  pointer-events: none;
+//}
+.symbol-lower-triangle{
+  fill: #618ea9;
+  stroke: none;
+}
+.symbol-upper-triangle{
+  fill: #618ea9;
+  stroke: none;
+}
+.time-sequencebar-title{
+  stroke: white;
+  stroke-width: 0.5px;
+}
+//.time-sequencebar-title-sorting-icon{
+//  visibility: hidden;
+//}
+//.time-sequencebar-title-label[class~='mouseover-rect'], .time-sequencebar-title-label[class~='mouseover-icon']{
+//  visibility: hidden;
+//}
+.time-sequencebar-title-rect[class~='mouseover-rect'], .time-sequencebar-title-rect[class~='click-icon'] {
+  fill: #999;
+}
+.time-sequencebar-title-sorting-icon[class~='click-icon'], .time-sequencebar-title-sorting-icon[class~='mouseover-rect'],.time-sequencebar-title-label[class~='click-icon'] {
+   fill: #fff;
+}
+
+.Gantta-d3-tip {
+  //width:fit-content;
+  //width:-webkit-fit-content;
+  //width:-moz-fit-content;
+  white-space: nowrap;
+  line-height: 1;
+  font-weight: bold;
+  padding: 4px 4px 4px 4px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+  pointer-events: none;
+  //max-width: 300px;
+  //min-width: 100px;
+  _width: 100px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.Gantta-d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  pointer-events: none;
+}
+
+/* Style northward tooltips differently */
+.Gantta-d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+  text-align: center;
+  content: "\25BC";
+}
+
+.box {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 10px sans-serif;
+}
+
+.box line,
+.box rect,
+.box circle {
+  fill: #000;
+  stroke: #fff;
+  stroke-width: 0.05em;
+}
+
+.box .center {
+  stroke-dasharray: 3,3;
+}
+
+.box .outlier {
+  fill: none;
+  stroke: #ccc;
+}
+.box-select[class~='selected-box-rect'] {
+  opacity: 0.7;
+  fill: #999;
+  stroke: null;
+}
+.box-select[class~='selected-box-rect-mouseover'] {
+  opacity: 0.7;
+  fill: #999;
+  stroke: null;
+}
+
+//.delay {
+//  stroke: #fff;
+//  stroke-dasharray: 3,3;
+//  stroke-width: 0.05em;
+//}
